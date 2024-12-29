@@ -1,0 +1,27 @@
+public class ContaBancaria {
+    private String nome;
+    private String agencia;
+    private String numeroConta;
+    private double saldo;
+
+    // Construtor
+    public ContaBancaria(String nome, String agencia, String numeroConta, double saldo) {
+        this.nome = nome;
+        this.agencia = agencia;
+        this.numeroConta = numeroConta;
+        this.saldo = saldo;
+    }
+
+    // Método para exibir a mensagem de boas-vindas
+    public void exibirMensagemBoasVindas() {
+        System.out.println("Olá " + nome + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + ", conta " + numeroConta + " e seu saldo " + saldo + " já está disponível para saque.");
+    }
+
+    public static void main(String[] args) {
+        // Criando uma nova conta bancária
+        ContaBancaria conta = new ContaBancaria("Sofia Fynkler", "1254", "56789-0", 5389.00);
+
+        // Exibindo a mensagem de boas-vindas
+        conta.exibirMensagemBoasVindas();
+    }
+}
